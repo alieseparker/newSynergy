@@ -1,0 +1,50 @@
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  display: block;
+}
+
+.navigation__title {
+  margin-left: 0;
+  display: inline;
+}
+
+.navigation__title__image {
+  height: 100px;
+  padding-top: 30px;
+}
+
+.navigation__about {
+  margin:0;
+  padding-top: 20px;
+  float: right;
+  display: block;
+}
+
+.navigation__login {
+  height: 75px;
+  width: 300px;
+  color:white;
+  padding-top: 30px;
+  float: right;
+  display: block;
+}
+
+.navigation__login__username {
+  color: black;
+}
+
+.navigation__login__password {
+  color: black;
+}
+
+body {
+  background-color: #FF9933;
+}
+
+#request {
+  text-align: right;
+  margin-right: 10%;
+}
