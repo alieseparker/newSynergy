@@ -4,6 +4,7 @@
   height: 150px;
   background-color: black;
   display: block;
+  bottom-margin: 50px;
 }
 
 .navigation__title {
@@ -40,8 +41,14 @@
   color: black;
 }
 
+
+
 body {
+
+  /* can be treated like a fallback */
   background-color: #FF9933;
+
+ background-image: linear-gradient(#FF9933, white);
 }
 
 
