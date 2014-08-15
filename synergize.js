@@ -14,7 +14,7 @@ function selectLogin() {
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
 
-  if(isValid(uname, pass)) {
+  if(isValidUser(uname, pass)) {
     document.getElementById('username').type = "hidden";
     document.getElementById('password').type = "hidden";
   }
@@ -24,13 +24,32 @@ function selectLogin() {
   document.getElementById('welcomebanner').innerHTML="Welcome "+ uname + "!";
 }
 
-function isValid(uname, pass) {
+function isValidUser(uname, pass) {
   if(uname=='codefellows' && pass=='password') {
     isLoggedIn=true;
     return true;
   }
   else {
     return false;
+  }
+}
+
+function isValidLength() {
+  var uname = document.getElementById('username').value;
+  var pass = document.getElementById('password').value;
+
+  if(uname.length<5) {
+    uname.innerHTML="Username is not valid length";
+  }
+  else {
+    uname.innerHTML="";
+  }
+
+  if(pass.length<5) {
+    pass.innerHTML="Password is not valid length";
+  }
+  else {
+    pass.innerHTML="";
   }
 }
 
@@ -41,5 +60,8 @@ var logSub = document.getElementById('loginsubmit');
 uname.addEventListener('click', selectMeUser, false);
 pass.addEventListener('click', selectMePass, false);
 logSub.addEventListener('click', selectLogin, false);
+
+uname.addEventListener('focus', isValidLength, false);
+pass.addEventListener('focus', isValidLength, false);
 
 
