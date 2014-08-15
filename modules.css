@@ -8,7 +8,7 @@
   width: 100%;
   height: 150px;
   background-color: black;
-  display: block;
+  display: inline;
   padding-bottom: 20px;
 }
 
@@ -18,15 +18,13 @@
 }
 
 .container__navigation__title__image {
-  height: 100px;
   padding-top: 30px;
 }
 
 .container__navigation__about {
   margin:0;
   padding-top: 20px;
-  float: right;
-  display: block;
+  display: inline;
 }
 
 .container__navigation__login {
@@ -34,7 +32,6 @@
   width: 300px;
   color:white;
   padding-top: 30px;
-  float: right;
   display: block;
 }
 
