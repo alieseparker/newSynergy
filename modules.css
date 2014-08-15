@@ -1,5 +1,5 @@
 .container {
-  width:100%;
+  width: 100%;
 }
 
 .container__navigation {
@@ -56,8 +56,6 @@
   margin-top: 0px;
   width: 853px;
   height: 480px;
-  frameborder: 0;
-  allowfullscreen;
 }
 
 .container__footer {
@@ -68,6 +66,24 @@
 .container__mission {
   padding-top: 200px;
 }
+
+.container__form__request {
+  text-align: right;
+  display: inline;
+}
+
+.container__form__request__label {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container__form__request__input {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
 
 body {
 
