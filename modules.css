@@ -1,6 +1,5 @@
 .container {
   width:100%;
-  display: block;
 }
 
 .container__navigation {
@@ -43,7 +42,18 @@
   color: black;
 }
 
-
+.container__tagline {
+  margin: 20px;
+  padding: 10px;
+  margin-top: 0px;
+  padding-top: 200px;
+}
+.container__tagline__window {
+  width: 853px;
+  height: 480px;
+  frameborder: 0;
+  allowfullscreen;
+}
 
 body {
 
