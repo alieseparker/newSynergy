@@ -42,20 +42,17 @@
   color: black;
 }
 
-
 .container__tagline {
   margin: 20px;
   padding: 10px;
+  padding-left: 300px;
   margin-top: 0px;
   padding-top: 200px;
-  padding-left: 200px;
-  padding-bottom: 75px;
+  padding-bottom: 0px;
 }
-.container__tagline__window {
-  padding-top: 0px;
-  margin-top: 0px;
-  width: 853px;
-  height: 480px;
+
+.container__content {
+  text-align: center;
 }
 
 .container__footer {
@@ -84,7 +81,6 @@
   margin: 0px;
 }
 
-
 body {
 
   /* can be treated like a fallback */
@@ -96,8 +92,4 @@ body {
 #request {
   text-align: right;
   margin-right: 10%;
-}
-
-#message {
-  color: white;
 }
