@@ -97,3 +97,7 @@ body {
   text-align: right;
   margin-right: 10%;
 }
+
+#message {
+  color: white;
+}

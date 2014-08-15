@@ -13,43 +13,41 @@ function selectMePass() {
 function selectLogin() {
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
+  var mess = document.getElementById('messagebar');
 
-  if(isValidUser(uname, pass)) {
+  if(isValidUser(uname, pass, mess)) {
     document.getElementById('username').type = "hidden";
     document.getElementById('password').type = "hidden";
   }
-
-  var button = document.getElementById('loginsubmit')
-  button.parentNode.removeChild(button);
-  document.getElementById('welcomebanner').innerHTML="Welcome "+ uname + "!";
 }
 
-function isValidUser(uname, pass) {
+function isValidUser(uname, pass, mess) {
   if(uname=='codefellows' && pass=='password') {
     isLoggedIn=true;
     return true;
   }
   else {
-    return false;
+    uname.textContent('Username & or Password is incorrect');
   }
 }
 
-function isValidLength() {
+function isValidLength(event) {
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
+  var mess = document.getElementById('messagebar');
 
   if(uname.length<5) {
-    uname.innerHTML="Username is not valid length";
+    uname.textContent ="Username is not valid length";
   }
   else {
-    uname.innerHTML="";
+    uname.textContent ="";
   }
 
   if(pass.length<5) {
-    pass.innerHTML="Password is not valid length";
+    pass.textContent="Password is not valid length";
   }
   else {
-    pass.innerHTML="";
+    pass.textContent="";
   }
 }
 
@@ -61,8 +59,8 @@ uname.addEventListener('click', selectMeUser, false);
 pass.addEventListener('click', selectMePass, false);
 logSub.addEventListener('click', selectLogin, false);
 
-uname.addEventListener('focus', isValidLength, false);
-pass.addEventListener('focus', isValidLength, false);
+uname.addEventListener('blur', isValidLength, false);
+pass.addEventListener('blur', isValidLength, false);
 
 
 
