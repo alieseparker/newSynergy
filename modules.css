@@ -1,6 +1,5 @@
 .container {
-  width:100%;
-  display: block;
+  width: 100%;
 }
 
 .container__navigation {
@@ -43,12 +42,56 @@
   color: black;
 }
 
+.container__tagline {
+  margin: 20px;
+  padding: 10px;
+  padding-left: 300px;
+  margin-top: 0px;
+  padding-top: 200px;
+  padding-bottom: 0px;
+}
+
+.container__content {
+  text-align: center;
+}
+
+.container__footer {
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.container__mission {
+  padding-top: 200px;
+}
+
+.container__form__request {
+  text-align: right;
+  display: inline;
+}
+
+.container__form__request__label {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container__form__request__input {
+  float: right;
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
 
   /* can be treated like a fallback */
   background-color: #FF9933;
 
  background-image: linear-gradient(#FF9933, white);
+}
+
+#request {
+  text-align: right;
+  margin-right: 10%;
 }
 
 
