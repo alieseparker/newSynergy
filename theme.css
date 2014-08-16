@@ -1,15 +1,12 @@
-footer {
-  text-align: center;
-  margin-bottom: 0px;
-  margin-top: 80px;
-  padding-top: 50px;
-}
-
 h2 {
   color: red;
 }
 
-iframe {
-  width: 853px;
-  height: 480px;
+body {
+
+  /* can be treated like a fallback */
+  background-color: #FF9933;
+
+ background-image: linear-gradient(#FF9933, white) no-repeat;
+
 }
