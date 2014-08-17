@@ -2,12 +2,8 @@ var isLoggedIn = false;
 
 document.getElementById('isValid').style.visibility = "hidden";
 
-function selectMeUser() {
-  document.getElementById('username').select();
-}
-
-function selectMePass() {
-  document.getElementById('password').select();
+function selectMe() {
+  this.select();
 }
 
 function selectLogin() {
@@ -49,8 +45,8 @@ var uname = document.getElementById('username');
 var pass = document.getElementById('password');
 var logSub = document.getElementById('loginsubmit');
 
-uname.addEventListener('click', selectMeUser, false);
-pass.addEventListener('click', selectMePass, false);
+uname.addEventListener('click', selectMe, false);
+pass.addEventListener('click', selectMe, false);
 logSub.addEventListener('click', selectLogin, false);
 
 uname.addEventListener('input', isValidLength, false);

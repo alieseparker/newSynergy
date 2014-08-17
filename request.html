@@ -11,58 +11,62 @@
     <title>Request A Demo</title>
     </head>
 
-  <header class="container">
-    <nav class="container__navigation">
-      <h1 class="container__navigation__title">
-        <img class="container__navigation__title__image four columns" src="http://journeynaz.com/wp-content/uploads/2011/03/synergy-main-concept.jpg"/>
-      </h1>
+ <header class="container">
+  <nav class="container__navigation">
+    <h1 class="container__navigation__title">
+      <img class="container__navigation__title__image four columns" src="http://journeynaz.com/wp-content/uploads/2011/03/synergy-main-concept.jpg"/>
+    </h1>
 
-      <a class="container__navigation__about three columns" href="index.html">Home</a>
-      <a class="container__navigation__about three columns" href="about.html">About</a>
+    <a class="container__navigation__about three columns" href="index.html">Home</a>
+    <a class="container__navigation__about three columns" href="about.html">About</a>
 
-      <div class="container__navigation__login four columns offset-by-eight">
-        <p id='welcomebanner'>Login</p>
-        <p id='messagebar'></p>
-        <input id="username" class="container__navigation__login__username" value="username">
-        </input>
-        <input id="password" class="container__navigation__login__password" value="password" type="password">
-        </input>
-        <button id="loginsubmit" class="container__navigation__login__submit">
-          Submit
-        </button>
-      </div>
-    </nav>
-  </header>
+    <div class="container__navigation__login four columns offset-by-eight">
+      <label id='welcomebanner' class="welcomebanner__title">
+        <p>Login <img id="isValid" src="redx-tiny.jpg"/> </p>
+      </label>
+      <input id="username" class="container__navigation__login__username" value="username">
+      </input>
+      <input id="password" class="container__navigation__login__password" value="password" type="password">
+      </input>
+      <button id="loginsubmit" class="container__navigation__login__submit">
+        Submit
+      </button>
+    </div>
+  </nav>
+</header>
 
 	<body class="container">
     <article class="container__contact">
     	<h1 class="container__contact__title">Request a Demo</h1>
     	<p class="container__contact__content">Set up a synergy demonstration with us today. We'll transform your office from a boring corporate beige-toned slum into a synergetic teamwork-fest the likes of which have never been seen in the history of mankind.</p>
 
-    	<div class="container__form offset-by-ten">
+      <section class="container__form__info nine columns" id="contactus">
+      </section>
+
+      <section class="container__form offset-by-ten">
     		<form class="container__form__request eight columns" id="request">
     			<p class="container__form__request__label four columns">Full Name: </p>
-          <input class="container__form__request__input three columns" type="text" name="firstname">
+          <input class="container__form__request__input three columns" type="text" id="firstname">
     			<p class="container__form__request__label four columns">Phone:</p>
-          <input class="container__form__request__input three columns" type="text" name="phone">
+          <input class="container__form__request__input three columns" type="text" id="phone">
     			<p class="container__form__request__label four columns">Company Name:</p>
-          <input class="container__form__request__input three columns" type="text" name="company">
+          <input class="container__form__request__input three columns" type="text" id="company">
     			<p class="container__form__request__label four columns">Current Synergy Status:</p>
-          <input class="container__form__request__input three columns" type="text" name="synergy">
+          <input class="container__form__request__input three columns" type="text" id="synergy">
     			<p class="container__form__request__label four columns">Date of Birth:</p>
-          <input class="container__form__request__input three columns" type="text" name="dob">
+          <input class="container__form__request__input three columns" type="text" id="dob">
     			<p class="container__form__request__label four columns">Home Address:</p>
-          <input class="container__form__request__input three columns" type="text" name="homeaddress">
+          <input class="container__form__request__input three columns" type="text" id="homeaddress">
     			<p class="container__form__request__label four columns">Credit Card Number:</p>
-          <input class="container__form__request__input three columns" type="text" name="creditcard">
+          <input class="container__form__request__input three columns" type="text" id="creditcard">
     			<p class="container__form__request__label four columns">Social Security Number:</p>
-          <input class="container__form__request__input three columns" type="text" name="ssn">
+          <input class="container__form__request__input three columns" type="text" id="ssn">
     			<p class="container__form__request__label four columns">Blood Type:</p>
-          <input class="container__form__request__input three columns" type="text" name="blood">
+          <input class="container__form__request__input three columns" type="text" id="blood">
     			<p class="container__form__request__label four columns">Name of Firstborn:</p>
-          <input class="container__form__request__input three columns" type="text" name="firstborn">
+          <input class="container__form__request__input three columns" type="text" id="firstborn">
     		</form>
-    	</div>
+    	</section>
     </article>
 	</body>
   <script type="text/javascript" src="synergize.js"></script>
