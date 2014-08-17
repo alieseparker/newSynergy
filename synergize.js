@@ -1,12 +1,10 @@
 var isLoggedIn = false;
 
 function selectMeUser() {
-  document.getElementById('username').focus();
   document.getElementById('username').select();
 }
 
 function selectMePass() {
-  document.getElementById('password').focus();
   document.getElementById('password').select();
 }
 
@@ -14,10 +12,12 @@ function selectLogin() {
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
   var mess = document.getElementById('messagebar');
+  var logsub = document.getElementById('loginsubmit')
 
   if(isValidUser(uname, pass, mess)) {
     document.getElementById('username').type = "hidden";
     document.getElementById('password').type = "hidden";
+    logsub.parentNode.removeChild('logsub');
   }
 }
 
@@ -55,8 +55,8 @@ var uname = document.getElementById('username');
 var pass = document.getElementById('password');
 var logSub = document.getElementById('loginsubmit');
 
-uname.addEventListener('click', selectMeUser, false);
-pass.addEventListener('click', selectMePass, false);
+uname.addEventListener('focus', selectMeUser, false);
+pass.addEventListener('focus', selectMePass, false);
 logSub.addEventListener('click', selectLogin, false);
 
 uname.addEventListener('blur', isValidLength, false);
