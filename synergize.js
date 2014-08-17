@@ -1,5 +1,7 @@
 var isLoggedIn = false;
 
+document.getElementById('isValid').style.visibility = "hidden";
+
 function selectMeUser() {
   document.getElementById('username').select();
 }
@@ -11,43 +13,35 @@ function selectMePass() {
 function selectLogin() {
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
-  var mess = document.getElementById('messagebar');
   var logsub = document.getElementById('loginsubmit')
 
-  if(isValidUser(uname, pass, mess)) {
+  if(isValidUser(uname, pass)) {
     document.getElementById('username').type = "hidden";
     document.getElementById('password').type = "hidden";
     logsub.parentNode.removeChild('logsub');
   }
 }
 
-function isValidUser(uname, pass, mess) {
+function isValidUser(uname, pass) {
   if(uname=='codefellows' && pass=='password') {
     isLoggedIn=true;
-    return true;
+    return isLoggedIn;
   }
   else {
-    uname.textContent('Username & or Password is incorrect');
+    document.getElementById('isValid').style.visibility = "visible";
   }
 }
 
-function isValidLength(event) {
+function isValidLength() {
+  var isValid = document.getElementById('isValid');
   var uname = document.getElementById('username').value;
   var pass = document.getElementById('password').value;
-  var mess = document.getElementById('messagebar');
 
-  if(uname.length<5) {
-    uname.textContent ="Username is not valid length";
+  if(uname.length < 5 || pass.length < 5) {
+    isValid.style.visibility = "visible";
   }
   else {
-    uname.textContent ="";
-  }
-
-  if(pass.length<5) {
-    pass.textContent="Password is not valid length";
-  }
-  else {
-    pass.textContent="";
+    isValid.style.visibility = "hidden";
   }
 }
 
@@ -55,12 +49,12 @@ var uname = document.getElementById('username');
 var pass = document.getElementById('password');
 var logSub = document.getElementById('loginsubmit');
 
-uname.addEventListener('focus', selectMeUser, false);
-pass.addEventListener('focus', selectMePass, false);
+uname.addEventListener('click', selectMeUser, false);
+pass.addEventListener('click', selectMePass, false);
 logSub.addEventListener('click', selectLogin, false);
 
-uname.addEventListener('blur', isValidLength, false);
-pass.addEventListener('blur', isValidLength, false);
+uname.addEventListener('input', isValidLength, false);
+pass.addEventListener('input', isValidLength, false);
 
 
 
