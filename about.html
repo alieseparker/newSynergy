@@ -21,8 +21,9 @@
     <a class="container__navigation__about three columns" href="request.html">Contact Us</a>
 
     <div class="container__navigation__login four columns offset-by-eight">
-      <p id='welcomebanner'>Login</p>
-      <p id='messagebar'></p>
+      <label id='welcomebanner' class="welcomebanner__title">
+        <p>Login <img id="isValid" src="redx-tiny.jpg"/> </p>
+      </label>
       <input id="username" class="container__navigation__login__username" value="username">
       </input>
       <input id="password" class="container__navigation__login__password" value="password" type="password">
@@ -35,9 +36,11 @@
 </header>
 
 	<body class="container">
-		<h1 class="container__mission">Our Mission</h1>
-		<p class="container__mission__content">We aim to provide synergy to even the smallest of hipster tech-nerd startups. Here at Synergy Worldwide, we're the local guys. Our goal is to get you up to speed on all your synergy-related needs. Everyone needs synergy. Synergy.</p>
-	</body>
+    <section class="container__mission">
+		  <h1 class="container__mission__title">Our Mission</h1>
+		  <p class="container__mission__content">We aim to provide synergy to even the smallest of hipster tech-nerd startups. Here at Synergy Worldwide, we're the local guys. Our goal is to get you up to speed on all your synergy-related needs. Everyone needs synergy. Synergy.</p>
+	  </section>
+  </body>
 
   <script type="text/javascript" src="synergize.js"></script>
 </html>
